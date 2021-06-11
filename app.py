@@ -189,7 +189,7 @@ def search_inspection():
 
 @app.route("/")
 def index():
-    return render_template('index.html') 
+    return render_template('index') 
        
     
 if __name__ == "__main__":
