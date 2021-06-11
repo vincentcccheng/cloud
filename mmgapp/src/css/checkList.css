@@ -1,0 +1,20 @@
+.checkList_select {
+  border: 0;
+  width: 100%;
+  background-color: white;
+}
+
+.checkList__select {
+  width: 100px;
+  font-size: 12px;
+}
+
+.checkList__option {
+  width: 100px;
+  font-size: 15px;
+}
+
+
+.button-delete:hover {
+  background-color: red;
+}

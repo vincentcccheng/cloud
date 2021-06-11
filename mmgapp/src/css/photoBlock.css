@@ -1,0 +1,29 @@
+.photoBlock img {
+  border: 1px solid #ddd; /* Gray border */
+  border-radius: 4px; /* Rounded border */
+  padding: 1px; /* Some padding */
+  width: 50px; /* Set a small width */
+  height: 50px; /* Set a small width */
+  margin-left: 10px;
+}
+
+.photoBlock :hover {
+  transform: scale(10);
+  position: relative;
+  left: 210px;
+  border-color: blue;
+  border-width: 1px;
+  padding: 0px;
+}
+
+.photoBlock {
+  display: inline-flex;
+  border: 1px solid blue; /* Gray border */
+  margin: 1px;
+  padding-right: 10px;
+}
+
+.photoBorder {
+  padding: 4px 2px 0px 1px;
+  border: 1px solid blue; /* Gray border */
+}

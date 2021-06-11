@@ -1,0 +1,77 @@
+#customers {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 40%;
+}
+
+#customers td,
+#customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+  font-size: 13px;
+}
+
+#customers tr {
+  /* background-color: #e9b26a; */
+  background-color: #0746f54d;
+  font-size: 13px;
+  font: bold;
+}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #0746f54d;
+  color: black;
+}
+
+table.fixed {
+  table-layout: fixed;
+}
+table.fixed td {
+  overflow: hidden;
+}
+
+.defectRow {
+  display: flex;
+  box-sizing: border-box;
+  height: 60px;
+  margin: 0px;  
+}
+
+.defectOption__language {
+  color: rgb(233, 70, 21);
+  background-color: white;
+  width: 100px;
+  font-weight: bold;
+}
+
+.defectOption__product {
+  width: 150px;
+}
+
+.defectOption__defectArea {
+  margin-left: 5px;
+  width: 300px;
+  text-overflow: ellipsis;
+}
+
+.defectOption__defectDetail {
+  margin-left: 5px;
+  width: 300px;
+  text-overflow: ellipsis;
+}
+
+.defectOption__major {
+  margin-left: 10px;
+  width: 80px;  
+  font-size: 14px;  
+}
+
+.defectOption__minor {
+  margin-left: 10px;
+  width: 80px;
+  font-size: 14px;
+  margin-right: 10px;
+}
