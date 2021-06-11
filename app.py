@@ -185,6 +185,11 @@ def search_inspection():
        return  jsonify(exists), 200 
     else:
        return "Error", 404 
+
+
+@app.route("/")
+def index():
+    return render_template('index.html') 
        
     
 if __name__ == "__main__":
