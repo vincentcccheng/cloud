@@ -1,5 +1,5 @@
 {
-  "name": "react-hooks",
+  "name": "mmgapp",
   "version": "0.1.1",
   "private": true,
   "dependencies": {
@@ -28,6 +28,5 @@
     "not ie <= 11",
     "not op_mini all"
   ],
-  "homepage": "https://taniarascia.github.io/react-hooks",
   "proxy": "http://localhost:5000"
 }
