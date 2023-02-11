@@ -1,43 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="utf-8">
-    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="theme-color" content="#000000">
-    <!--
-      manifest.json provides metadata used when your web app is added to the
-      homescreen on Android. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
-    <link rel="stylesheet" href="https://taniarascia.github.io/primitive/css/main.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    
-    <!-- 
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React CRUD App with Hooks</title>
+ 
   </head>
   <body>
-    <noscript>
-      You need to enable JavaScript to run this app.
-    </noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+    
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+    <h1>The section element</h1>
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
+    <section>
+      <h2>WWF History</h2>
+      <p>The World Wide Fund for Nature (WWF) is an international organization working on issues regarding the conservation, research and restoration of the environment, formerly named the World Wildlife Fund. WWF was founded in 1961.</p>
+    </section>
+    <ul style="list-style: none">
+      <li>Audio Files
+        <ul id="list">
+          <li><a href="#" data-value="https://dl.sndup.net/fkk4/slow.mp3">Test</a></li>
+          <li><a href="#" data-value="http://media.w3.org/2010/07/bunny/04-Death_Becomes_Fur.mp4">Death_Becomes_Fur.mp4</a></li>
+          <li><a href="#" data-value="http://media.w3.org/2010/11/rrs006.oga">rrs006.oga</a></li>
+          <li><a href="#" data-value="http://media.w3.org/2010/05/sound/sound_90.mp3">sound_90.mp3</a></li>
+        </ul>
+      </li>
+    </ul>
+    
+    <audio id="audio" controls="controls">
+      <source id="audioSource" src=""></source>
+      Your browser does not support the audio format.
+    </audio>
+ 
+
+    <section>
+      <h2>WWF's Symbol</h2>
+      <p>The Panda has become the symbol of WWF. The well-known panda logo of WWF originated from a panda named Chi Chi that was transferred from the Beijing Zoo to the London Zoo in the same year of the establishment of WWF.</p>      
+    </section>
+
+    <script>
+      list.onclick = function (e) {
+        e.preventDefault()
+
+        var elm = e.target
+        var audio = document.getElementById("audio")
+
+        var source = document.getElementById("audioSource")
+        source.src = elm.getAttribute("data-value")
+
+        audio.load() //call this to just preload the audio without playing
+        audio.play() //call this to play the song right away
+      }
+    </script>
+    
   </body>
 </html>
