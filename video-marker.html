@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" /> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 
     <style>
       .container {
@@ -51,22 +52,14 @@
         cursor: pointer;
       }
 
-      .buttons button::before {
-        content: "\f144";
-        font-family: "Font Awesome 5 Free";
-        width: 30px;
-        height: 30px;
-        display: inline-block;
-        font-size: 28px;
-        color: #fff;
-        -webkit-font-smoothing: antialiased;
+      .buttons .fa-play-circle {
+        color: white;
+        font-size: 2rem;
       }
 
-      .buttons button.play:before {
-        content: "\f144";
-      }
-      .buttons button.pause:before {
-        content: "\f28b";
+      .buttons .fa-pause-circle {
+        color: white;
+        font-size: 2rem;
       }
 
       .orange-bar {
@@ -107,7 +100,7 @@
             <div class="orange-juice" id="orange-juice"></div>
           </div>
           <div class="buttons">
-            <button id="play-pause"></button>
+            <button id="play-pause" class="fa fa-play-circle"></button>
           </div>
         </div>
       </div>
@@ -120,14 +113,14 @@
 
       function togglePlayPause() {
         if (video.paused) {
-          btn.className = "pause"
+          // for button, it must use className
+          btn.className = "fa fa-play-circle"
           video.play()
         } else {
-          btn.className = "play"
+          btn.className = "fa fa-pause-circle"
           video.pause()
 
           //create marker and give it the left value..
-
           var juicePos = video.currentTime / video.duration
           left = juicePos * 100 + "%"
 
@@ -137,7 +130,7 @@
           marker.classList.add("bubbles")
           marker.style.left = left
           marker.onclick = function () {
-            alert("Elapsed Time : " + timeElapsed)
+            alert("You are at : " + timeElapsed + " seconds.")
           }
 
           juice.appendChild(marker)
